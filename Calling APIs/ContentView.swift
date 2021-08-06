@@ -44,8 +44,8 @@ struct ContentView: View {
     }
 
     func queryAPI() {
-        let apiKey = "?rapidapi-key=806e417063msha1342dfbeba1d9dp15b6a7jsn86760e5664ed"
-        let query = "billboard-api2.p.rapidapi.com\(apiKey)"
+        let apiKey = "&rapidapi-key=806e417063msha1342dfbeba1d9dp15b6a7jsn86760e5664ed"
+        let query = "https://billboard-api2.p.rapidapi.com/hot-100?date=2021-07-25$&range=1-10\(apiKey)"
         if let url = URL (string: query) {
             if let data = try? Data(contentsOf: url) {
                 let json = try! JSON (data: data)
