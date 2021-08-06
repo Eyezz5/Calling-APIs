@@ -18,9 +18,9 @@ struct ContentView: View {
                         Text(single.rank)
                         Text(single.title)
                         Text(single.artist)
-                        Text("Last Week: \(single.lastweek)")
+                        Text("Last Week: \(single.lastWeek)")
                         Text("Peak position: \(single.peakPosition)")
-                        Text("Weeks on chart: \(single.detail)")
+                        Text("Weeks on chart: \(single.weeksOnChart)")
                         Text("Detail: \(single.detail)")
                     },
                     label: {
@@ -31,7 +31,7 @@ struct ContentView: View {
                         }
                     })
             }
-            .navigationTitle("Top 10 Songs")
+            .navigationTitle("Top Ten Songs")
         }
         .onAppear(perform: {
             queryAPI()
@@ -39,12 +39,12 @@ struct ContentView: View {
         .alert(isPresented: $showingAlert, content: {
             Alert(title: Text("Loading Error"),
                   message: Text("There was a problem loading the data"),
-                  dismissButton: .defualt(Text("OK")))
+                  dismissButton: .default(Text("OK")))
         })
     }
 
     func queryAPI() {
-        let apiKey = "?rapidapi-key=806e417063msha1342dfbeba1d9dp15b6a7jsn86760e5664ed "
+        let apiKey = "?rapidapi-key=806e417063msha1342dfbeba1d9dp15b6a7jsn86760e5664ed"
         let query = "billboard-api2.p.rapidapi.com\(apiKey)"
         if let url = URL (string: query) {
             if let data = try? Data(contentsOf: url) {
@@ -58,7 +58,8 @@ struct ContentView: View {
                         let lastWeek = item["last week"]!.stringValue
                         let peakPosition = item["peak position"]!.stringValue
                         let weeksOnChart = item["last week"]!.stringValue
-                        let single = Single(rank: rank, title: title, artist: artist, lastWeek: lastWeek, peakPosition: peakPosition, weeksOnChart: weeksOnChart)
+                        let detail = item["detail"]!.stringValue
+                        let single = Single(rank: rank, title: title, artist: artist, lastWeek: lastWeek, peakPosition: peakPosition, weeksOnChart: weeksOnChart, detail: detail)
                         singles.append(single)
                     }
                 }
@@ -75,7 +76,7 @@ struct ContentView: View {
         }
     }
     
-    struct Single: Identifiable{
+    struct Single: Identifiable {
         let id = UUID()
         let rank: String
         let title: String
@@ -83,4 +84,5 @@ struct ContentView: View {
         let lastWeek: String
         let peakPosition: String
         let weeksOnChart: String
+        let detail: String
     }
