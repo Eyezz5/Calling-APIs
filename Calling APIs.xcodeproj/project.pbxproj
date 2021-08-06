@@ -11,6 +11,7 @@
 		A009BC8D26B425FA004B8AA4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009BC8C26B425FA004B8AA4 /* ContentView.swift */; };
 		A009BC8F26B42601004B8AA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A009BC8E26B42601004B8AA4 /* Assets.xcassets */; };
 		A009BC9226B42601004B8AA4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A009BC9126B42601004B8AA4 /* Preview Assets.xcassets */; };
+		A09DFE1326BCB38D00034A1C /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09DFE1226BCB38D00034A1C /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		A009BC8E26B42601004B8AA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A009BC9126B42601004B8AA4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A009BC9326B42601004B8AA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A09DFE1226BCB38D00034A1C /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				A009BC8C26B425FA004B8AA4 /* ContentView.swift */,
 				A009BC8E26B42601004B8AA4 /* Assets.xcassets */,
 				A009BC9326B42601004B8AA4 /* Info.plist */,
+				A09DFE1226BCB38D00034A1C /* SwiftyJSON.swift */,
 				A009BC9026B42601004B8AA4 /* Preview Content */,
 			);
 			path = "Calling APIs";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09DFE1326BCB38D00034A1C /* SwiftyJSON.swift in Sources */,
 				A009BC8D26B425FA004B8AA4 /* ContentView.swift in Sources */,
 				A009BC8B26B425FA004B8AA4 /* Calling_APIsApp.swift in Sources */,
 			);
